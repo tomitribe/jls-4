@@ -1,4 +1,4 @@
-package org.tomitribe.jls;
+package org.example.jls;
 
 import org.junit.Test;
 
