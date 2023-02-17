@@ -27,8 +27,8 @@
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>se</artifactId>
+  <artifactId>cdi</artifactId>
   <packaging>jar</packaging>
-  <name>SE JLS examples/tests</name>
+  <name>CDI JLS examples/tests</name>
 
 </project>

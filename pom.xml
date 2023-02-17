@@ -21,14 +21,45 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>org.tomitribe.jls</groupId>
-    <artifactId>jls-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-  </parent>
+  <groupId>org.tomitribe.jls</groupId>
+  <artifactId>jls-parent</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>JLS examples/tests</name>
 
-  <artifactId>se</artifactId>
-  <packaging>jar</packaging>
-  <name>SE JLS examples/tests</name>
+  <modules>
+    <module>se</module>
+    <module>cdi</module>
+  </modules>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.1</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.10.1</version>
+        <configuration>
+          <release>17</release>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M7</version>
+      </plugin>
+
+
+    </plugins>
+  </build>
+
 
 </project>
