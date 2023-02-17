@@ -13,7 +13,8 @@ public class GenericsTest {
     @Test
     public void matchReflection() {
         final List<Class<?>>
-            types = asList(MyRawBean.class, MyRawBean2.class, MyRawBean3.class, MyRawBean4.class, MyRawBean5.class, MyRawBean6.class);
+            types = asList(MyRawBean.class, MyRawBean2.class, MyRawBean3.class, MyRawBean4.class, MyRawBean5.class,
+                           MyRawBean6.class, MyRawBean7.class);
         for (Class<?> type : types) {
             System.out.println("==== " + type);
             logJavaHierarchy(type);
@@ -84,5 +85,14 @@ public class GenericsTest {
     interface MyInterface6 extends MySuperInterface6 {
     }
     interface MySuperInterface6<T> {
+    }
+
+    static class MyRawBean7 extends MyBean7 {
+    }
+    static class MyBean7<T> implements MyInterface7 {
+    }
+    interface MyInterface7<T> extends MySuperInterface7 {
+    }
+    interface MySuperInterface7<T> {
     }
 }
